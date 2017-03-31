@@ -30,23 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.protractorCtrl1 = new HonasProtractor.ProtractorCtrl();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(94, 26);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::HonasProtractor.Properties.Resources.HonasLogo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Image = global::HonasProtractor.Properties.Resources.HonasLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 206);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 200);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(643, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(400, 80);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
@@ -58,7 +70,7 @@
             this.protractorCtrl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.protractorCtrl1.Location = new System.Drawing.Point(0, 0);
             this.protractorCtrl1.Name = "protractorCtrl1";
-            this.protractorCtrl1.Size = new System.Drawing.Size(643, 206);
+            this.protractorCtrl1.Size = new System.Drawing.Size(400, 200);
             this.protractorCtrl1.TabIndex = 3;
             this.protractorCtrl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.protractorCtrl1_MouseDown);
             this.protractorCtrl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.protractorCtrl1_MouseMove);
@@ -68,13 +80,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 320);
+            this.ClientSize = new System.Drawing.Size(400, 280);
             this.Controls.Add(this.protractorCtrl1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -84,6 +97,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ProtractorCtrl protractorCtrl1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

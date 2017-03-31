@@ -27,7 +27,7 @@ namespace HonasProtractor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.Height = pictureBox1.Height + (protractorCtrl1.Width / 2);
         }
 
 
@@ -77,6 +77,11 @@ namespace HonasProtractor
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             this.Refresh();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

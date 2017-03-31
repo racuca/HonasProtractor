@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "ProtractorCtrl";
-            this.Size = new System.Drawing.Size(605, 359);
+            this.Size = new System.Drawing.Size(400, 200);
             this.ResumeLayout(false);
 
         }
