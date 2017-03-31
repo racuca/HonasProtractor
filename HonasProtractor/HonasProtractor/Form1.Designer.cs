@@ -32,6 +32,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.closebtn = new System.Windows.Forms.Button();
             this.protractorCtrl1 = new HonasProtractor.ProtractorCtrl();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,9 +66,19 @@
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
+            // closebtn
+            // 
+            this.closebtn.Location = new System.Drawing.Point(0, 202);
+            this.closebtn.Name = "closebtn";
+            this.closebtn.Size = new System.Drawing.Size(45, 20);
+            this.closebtn.TabIndex = 4;
+            this.closebtn.Text = "▽";
+            this.closebtn.UseVisualStyleBackColor = true;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
+            // 
             // protractorCtrl1
             // 
-            this.protractorCtrl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.protractorCtrl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.protractorCtrl1.Location = new System.Drawing.Point(0, 0);
             this.protractorCtrl1.Name = "protractorCtrl1";
             this.protractorCtrl1.Size = new System.Drawing.Size(400, 200);
@@ -81,6 +92,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 280);
+            this.Controls.Add(this.closebtn);
             this.Controls.Add(this.protractorCtrl1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -98,6 +110,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private ProtractorCtrl protractorCtrl1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Button closebtn;
     }
 }
 

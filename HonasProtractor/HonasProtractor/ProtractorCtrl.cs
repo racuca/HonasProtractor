@@ -29,7 +29,7 @@ namespace HonasProtractor
         {
             base.OnPaint(e);
 
-            ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Gray, ButtonBorderStyle.Solid);
+            //ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Gray, ButtonBorderStyle.Solid);
 
             DrawProtractor(e.Graphics);
         }

@@ -11,6 +11,11 @@ namespace HonasProtractor
 {
     public partial class Form1 : Form
     {
+
+        string extendstr = "▽";
+        string collapsestr = "△";
+        bool bcollapsed = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +32,10 @@ namespace HonasProtractor
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            closebtn.Width = 50;
+            closebtn.Location = new Point(protractorCtrl1.Location.X, pictureBox1.Location.Y);
+            closebtn.Text = extendstr;
+
             this.Height = pictureBox1.Height + (protractorCtrl1.Width / 2);
         }
 
@@ -82,6 +91,23 @@ namespace HonasProtractor
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            if (bcollapsed == false)
+            {
+                closebtn.Text = extendstr;
+                pictureBox1.BackgroundImage = null;
+                pictureBox1.Visible = false;
+            }
+            else
+            {
+                closebtn.Text = collapsestr;
+                pictureBox1.BackgroundImage = Properties.Resources.HonasLogo;
+                pictureBox1.Visible = true;
+            }
+            bcollapsed = !bcollapsed;
         }
     }
 }
