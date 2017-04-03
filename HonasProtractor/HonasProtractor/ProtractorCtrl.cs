@@ -29,8 +29,6 @@ namespace HonasProtractor
         {
             base.OnPaint(e);
 
-            //ControlPaint.DrawBorder(e.Graphics, this.ClientRectangle, Color.Gray, ButtonBorderStyle.Solid);
-
             DrawProtractor(e.Graphics);
         }
 
@@ -40,7 +38,7 @@ namespace HonasProtractor
         {
             Debug.WriteLine("DrawProtractor");
 
-            float radius = this.Height;
+            float radius = this.Width / 2;
             float centerx = 0;
             float centery = 0;
 
@@ -72,14 +70,15 @@ namespace HonasProtractor
                 IList<PointF> points = SplitLine(new PointF(centerx, centery), new PointF(circlep.X, circlep.Y), splitCount);
                 PointF startPoint = points[points.Count - 2];
 
-                if (degree != -90)
+                //if (degree != -90)
+                if (degree % 90 != 0)
                 {
                     compensatedStart = AxisCompensation(startPoint);
+                    
                     // Draw a line between a point on circle and a point away from splitCount.
                     g.DrawLine(DrawPen, compensatedStart, compensatedCirclePoint);
-
-
-                    // Draw short line for every 10 degrees and display degree
+                    
+                    // Display degree text and Draw short line for every 10 degrees.
                     if (degree % 10 == 0)
                     {
                         PointF textPos = AxisCompensation(points[points.Count - 3]);
@@ -100,7 +99,6 @@ namespace HonasProtractor
                     // Draw a line between a point on circle and a point away from splitCount.
                     g.DrawLine(DrawPen, compensatedStart, compensatedCirclePoint);
                 }
-
             }
         }
         
@@ -115,7 +113,7 @@ namespace HonasProtractor
 
         public PointF AxisCompensation(PointF orig)
         {
-            return new PointF(orig.X + this.Height, orig.Y + this.Height);
+            return new PointF(orig.X + this.Width / 2, orig.Y + this.Width / 2);
         }
 
 

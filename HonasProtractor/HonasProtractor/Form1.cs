@@ -109,5 +109,29 @@ namespace HonasProtractor
             }
             bcollapsed = !bcollapsed;
         }
+
+        private void widthToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbChangeWidth_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int bresult = -1;
+                int.TryParse(tbChangeWidth.Text, out bresult);
+
+                if (bresult < 0)
+                    return;
+
+                this.Width = bresult;
+                this.Height = pictureBox1.Height + bresult / 2;
+
+                protractorCtrl1.Update();
+
+                closebtn.Location = new Point(protractorCtrl1.Location.X, protractorCtrl1.Location.Y + protractorCtrl1.Height);
+            }
+        }
     }
 }

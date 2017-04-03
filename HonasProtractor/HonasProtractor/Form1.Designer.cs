@@ -33,6 +33,9 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.closebtn = new System.Windows.Forms.Button();
+            this.widthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tbChangeWidth = new System.Windows.Forms.ToolStripTextBox();
             this.protractorCtrl1 = new HonasProtractor.ProtractorCtrl();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -41,14 +44,16 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.widthToolStripMenuItem,
+            this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(94, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(131, 54);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -76,9 +81,29 @@
             this.closebtn.UseVisualStyleBackColor = true;
             this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
+            // widthToolStripMenuItem
+            // 
+            this.widthToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tbChangeWidth});
+            this.widthToolStripMenuItem.Name = "widthToolStripMenuItem";
+            this.widthToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.widthToolStripMenuItem.Text = "Radius(px)";
+            this.widthToolStripMenuItem.Click += new System.EventHandler(this.widthToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(127, 6);
+            // 
+            // tbChangeWidth
+            // 
+            this.tbChangeWidth.Name = "tbChangeWidth";
+            this.tbChangeWidth.Size = new System.Drawing.Size(100, 23);
+            this.tbChangeWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbChangeWidth_KeyDown);
+            // 
             // protractorCtrl1
             // 
-            this.protractorCtrl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.protractorCtrl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.protractorCtrl1.Location = new System.Drawing.Point(0, 0);
             this.protractorCtrl1.Name = "protractorCtrl1";
             this.protractorCtrl1.Size = new System.Drawing.Size(400, 200);
@@ -92,6 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 280);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.protractorCtrl1);
             this.Controls.Add(this.pictureBox1);
@@ -111,6 +137,9 @@
         private ProtractorCtrl protractorCtrl1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button closebtn;
+        private System.Windows.Forms.ToolStripMenuItem widthToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox tbChangeWidth;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 
