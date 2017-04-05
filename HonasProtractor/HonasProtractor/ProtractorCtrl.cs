@@ -70,7 +70,6 @@ namespace HonasProtractor
                 IList<PointF> points = SplitLine(new PointF(centerx, centery), new PointF(circlep.X, circlep.Y), splitCount);
                 PointF startPoint = points[points.Count - 2];
 
-                //if (degree != -90)
                 if (degree % 90 != 0)
                 {
                     compensatedStart = AxisCompensation(startPoint);

@@ -32,9 +32,9 @@ namespace HonasProtractor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            closebtn.Width = 50;
-            closebtn.Location = new Point(protractorCtrl1.Location.X, pictureBox1.Location.Y);
-            closebtn.Text = extendstr;
+            //closebtn.Width = 50;
+            //closebtn.Location = new Point(protractorCtrl1.Location.X, pictureBox1.Location.Y);
+            //closebtn.Text = extendstr;
 
             this.Height = pictureBox1.Height + (protractorCtrl1.Width / 2);
         }
@@ -97,13 +97,13 @@ namespace HonasProtractor
         {
             if (bcollapsed == false)
             {
-                closebtn.Text = extendstr;
+                //closebtn.Text = extendstr;
                 pictureBox1.BackgroundImage = null;
                 pictureBox1.Visible = false;
             }
             else
             {
-                closebtn.Text = collapsestr;
+                //closebtn.Text = collapsestr;
                 pictureBox1.BackgroundImage = Properties.Resources.HonasLogo;
                 pictureBox1.Visible = true;
             }
@@ -130,8 +130,27 @@ namespace HonasProtractor
 
                 protractorCtrl1.Update();
 
-                closebtn.Location = new Point(protractorCtrl1.Location.X, protractorCtrl1.Location.Y + protractorCtrl1.Height);
+                //closebtn.Location = new Point(protractorCtrl1.Location.X, protractorCtrl1.Location.Y + protractorCtrl1.Height);
             }
+        }
+
+        private void logoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (bcollapsed == false)
+            {
+                //closebtn.Text = extendstr;
+                pictureBox1.BackgroundImage = null;
+                pictureBox1.Visible = false;
+            }
+            else
+            {
+                //closebtn.Text = collapsestr;
+                pictureBox1.BackgroundImage = Properties.Resources.HonasLogo;
+                pictureBox1.Visible = true;
+            }
+            bcollapsed = !bcollapsed;
+
+            logoToolStripMenuItem.Checked = !bcollapsed;
         }
     }
 }
